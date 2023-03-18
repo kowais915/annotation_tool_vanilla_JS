@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
     <title>Annotation Tool</title>
 </head>
 <body>
@@ -28,12 +29,18 @@
 
     <main>
 
+        <!-- dropzone -->
+        <form action="/target" class="dropzone" id="my-great-dropzone"></form>
+
         <h1>Image Annotation Tool</h1>
         <!-- canvas goes here -->
         <canvas id="canvas" width="200" height="100"></canvas>
 
     </main>
 
+
 <script src="./index.js"></script>
+<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+
 </body>
 </html>
