@@ -6,3 +6,31 @@
     margin: 0;
     font-family: "Poppins";
   }
+
+  /* styling the navbar */
+
+
+  .title{
+    margin: 15px
+  }
+
+  li, a{
+    list-style-type: none;
+    text-decoration: none;
+  }
+  .navbar{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 5px 5px rgb(179, 170, 170);
+  }
+
+  ul{
+    display: flex;
+    font-size: 1.3em;
+    
+  }
+
+  ul>li{
+    margin: 15px;
+  }
