@@ -34,3 +34,11 @@
   ul>li{
     margin: 15px;
   }
+
+  /* canvas styling here */
+
+  #canvas{
+    border: 1px solid #ccc;
+   
+
+  }
