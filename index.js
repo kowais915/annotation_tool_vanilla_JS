@@ -1,29 +1,26 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
-
-var myDropzone = new Dropzone("#my-great-dropzone", {
-    url: "/",
-    maxFilesize: 100, // MB
-    acceptedFiles: "image/*",
-    success: function(file, response) {
-      // Create an image element and set the source to the uploaded file URL
-      var img = document.createElement("img");
-      img.src = response.url;
-      
-      // Append the image to the dropzone area
-      this.element.appendChild(img);
-    }
-  });
 
 
 
-canvas.style.height = '600px';
-canvas.style.width = '800px'
 
-ctx.beginPath();
-ctx.moveTo(30, 30);
-ctx.lineTo(200, 100);
-ctx.stroke();
+const input = document.querySelector('#uploaded_image')
+const display = document.querySelector('#canvas')
+let image_up = "";
+
+display.innerHTML = `<p>Hi I am owais</p>`
 
 
+
+
+
+// event listeneer on the upload image button
+
+input.addEventListener('change', (event)=>{
+
+  const reader = new FileReader();
+  reader.readAsDataURL(input.files[0])
+  reader.addEventListener('load', ()=>{
+    display.innerHTML = `<img src = '${reader.result}'/>`
+  })
+
+    
+})

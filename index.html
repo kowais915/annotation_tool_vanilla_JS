@@ -12,7 +12,7 @@
     <nav class="navbar">
         <!-- navbar goes here -->
         <div class="title">
-            <h1>Annotation Tool</h1>
+            <h1 id="header-title">Annotation Tool</h1>
         </div>
 
         <ul>
@@ -30,11 +30,13 @@
     <main>
 
         <div class="sidebar">
-            <h1>Sidebar</h1>   
-            <button class="btn">Upload Pictures</button>
+            <h1>Sidebar</h1>
+            <input type="file" id="uploaded_image" accept="image/png, image/jpg">  
+            
         </div>
      
-        <canvas id="canvas" width="200" height="100"></canvas>
+        <!-- <canvas id="canvas" width="200" height="100"></canvas> -->
+        <div id="canvas"></div>
 
     </main>
 
