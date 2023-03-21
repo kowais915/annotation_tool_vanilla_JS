@@ -2,17 +2,20 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 
-// dropzone
-Dropzone.options.myGreatDropzone = { // camelized version of the `id`
-    paramName: "file", // The name that will be used to transfer the file
-    maxFilesize: 2, // MB
-    accept: function(file, done) {
-      if (file.name == "justinbieber.jpg") {
-        done("Naha, you don't.");
-      }
-      else { done(); }
+var myDropzone = new Dropzone("#my-great-dropzone", {
+    url: "/",
+    maxFilesize: 100, // MB
+    acceptedFiles: "image/*",
+    success: function(file, response) {
+      // Create an image element and set the source to the uploaded file URL
+      var img = document.createElement("img");
+      img.src = response.url;
+      
+      // Append the image to the dropzone area
+      this.element.appendChild(img);
     }
-  };
+  });
+
 
 
 canvas.style.height = '600px';
